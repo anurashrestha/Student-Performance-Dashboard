@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Student Grades Overview</h2>
+    {% if students %}
+        <ul>
+        {% for entry in students %}
+            <li>{{ entry.name }} | {{ entry.subject }}: {{ entry.grade }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No data submitted yet.</p>
+    {% endif %}
+    <br>
+    <a href="/">← Add Another</a>
+</body>
+</html>
 
