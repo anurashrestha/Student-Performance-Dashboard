@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <title>Student Dashboard</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="container">
-    <h2>Student Grade Entries</h2>
+    <h2>📒 Student Grade Entries</h2>
 
     {% if students %}
     <div class="card-wrapper">
@@ -17,19 +18,65 @@
           <strong>{{ entry.name }}</strong>
         </div>
         <div class="card-body">
-          Subject: <span>{{ entry.subject }}</span><br>
-          Grade: <span>{{ entry.grade }}</span>
-        </div>
+  <table class="info-table">
+    <tr>
+      <td class="label">📚 Subject:</td>
+      <td>{{ entry.subject }}</td>
+    </tr>
+    <tr>
+      <td class="label">⭐ Grade:</td>
+      <td>{{ entry.grade }}</td>
+    </tr>
+  </table>
+</div>
+
+        <!-- ❌ Delete Button -->
+        <form method="POST" action="/delete/{{ entry.id }}">
+          <button class="delete-btn" type="submit" title="Delete entry">❌</button>
+        </form>
       </div>
       {% endfor %}
     </div>
+
+    <!-- 📊 Grade Chart -->
+    <h3 class="text-center mt-5">📊 Grade Overview</h3>
+    <canvas id="gradeChart" width="400" height="200"></canvas>
+
     {% else %}
     <p class="text-muted">No entries yet. Add some 🌼</p>
     {% endif %}
 
     <div class="text-center mt-4">
-      <a href="/" class="btn btn-outline-primary">← Add Another</a>
+        <a href="/" class="cute-button">➕ Add Another</a>
     </div>
   </div>
+
+  <!-- Chart Script -->
+  <script>
+    const students = {{ students | tojson }};
+    const names = students.map(s => s.name);
+    const grades = students.map(s => s.grade);
+
+    const ctx = document.getElementById('gradeChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: names,
+        datasets: [{
+          label: 'Grades',
+          data: grades,
+          backgroundColor: [
+            '#f5c2e7', '#c9c6f9', '#b8e0ff', '#ffd6e0', '#d0f4de'
+          ],
+          borderRadius: 12
+        }]
+      },
+      options: {
+        scales: {
+          y: { beginAtZero: true, max: 100 }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
