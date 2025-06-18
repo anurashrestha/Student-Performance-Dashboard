@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>Student Grades Overview</h2>
+  <div class="container">
+    <h2>Student Grade Entries</h2>
+
     {% if students %}
-        <ul>
-        {% for entry in students %}
-            <li>{{ entry.name }} | {{ entry.subject }}: {{ entry.grade }}</li>
-        {% endfor %}
-        </ul>
+    <div class="card-wrapper">
+      {% for entry in students %}
+      <div class="grade-card">
+        <div class="card-header pastel-{{ loop.index % 5 }}">
+          <strong>{{ entry.name }}</strong>
+        </div>
+        <div class="card-body">
+          Subject: <span>{{ entry.subject }}</span><br>
+          Grade: <span>{{ entry.grade }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
     {% else %}
-        <p>No data submitted yet.</p>
+    <p class="text-muted">No entries yet. Add some 🌼</p>
     {% endif %}
-    <br>
-    <a href="/">← Add Another</a>
+
+    <div class="text-center mt-4">
+      <a href="/" class="btn btn-outline-primary">← Add Another</a>
+    </div>
+  </div>
 </body>
 </html>
-
