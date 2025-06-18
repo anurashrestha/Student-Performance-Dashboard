@@ -71,3 +71,77 @@ h2 {
 .nav-link a:hover {
   text-decoration: underline;
 }
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #d9534f;
+  font-size: 1.2rem;
+  cursor: pointer;
+  float: right;
+  margin-top: -30px;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.info-table td {
+  padding: 6px 12px;
+  border-bottom: 1px dashed #e9d3ff;
+  vertical-align: top;
+}
+
+.info-table td.label {
+  font-weight: 600;
+  color: #6a4cad;
+  width: 90px;
+  white-space: nowrap;
+  padding-left: 6px;
+}
+
+.info-table td:not(.label) {
+  padding-left: 14px;  /* Adds space between label and value */
+  color: #4a3b67;
+}
+
+.card-header {
+  padding: 12px 20px;
+  padding-left: 40px;  /* 👈 Add this line to move name away from the edge */
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: left;  /* keeps it aligned neatly */
+  color: #d78ebf;
+  border-bottom: 1px solid #a65b94;
+}
+
+.cute-button {
+  display: inline-block;
+  background-color: #f5c2e7;
+  color: #5e4084;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cute-button:hover {
+  background-color: #eaa9d6;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
