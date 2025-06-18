@@ -1,1 +1,59 @@
+body {
+  background-color: #fefaff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  color: #6c5ce7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 2px dashed #dcd6f7;
+}
+
+form input, form button {
+  border-radius: 12px;
+}
+
+.table thead {
+  background-color: #f5e0ff;
+  color: #5f27cd;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #fef4ff;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #6c5ce7;
+}
+
+a:hover {
+  color: #a29bfe;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #aaa;
+}
 
