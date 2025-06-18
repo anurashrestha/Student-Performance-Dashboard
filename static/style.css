@@ -1,43 +1,73 @@
-.card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
+/* General pastel look */
+body {
+  background-color: #f4d5ef;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.grade-card {
-  width: 200px;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(230, 200, 255, 0.2);
-  overflow: hidden;
-  border: 1.5px dashed #f3d9ff;
-}
-
-.card-header {
-  padding: 12px;
-  font-size: 1.1rem;
-  font-weight: bold;
+h2 {
   text-align: center;
-  color: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-/* Cute pastel themes */
-.pastel-0 { background: #f5c2e7; }
-.pastel-1 { background: #c9c6f9; }
-.pastel-2 { background: #b8e0ff; }
-.pastel-3 { background: #ffd6e0; }
-.pastel-4 { background: #d0f4de; }
-
-.card-body {
-  padding: 12px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.card-body span {
+  margin-bottom: 20px;
+  color: #6a4cad;
   font-weight: 600;
-  color: #444;
+}
+
+.form-wrapper {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #fff0f6;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 2px dashed #e3c6ff;
+}
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.entry-form label {
+  font-weight: 600;
+  color: #6a4cad;
+}
+
+.entry-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+.entry-form button {
+  padding: 12px;
+  background-color: #f5c2e7;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  color: #5e4084;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.entry-form button:hover {
+  background-color: #e3a0c5;
+}
+
+.nav-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-link a {
+  color: #6a4cad;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-link a:hover {
+  text-decoration: underline;
 }
