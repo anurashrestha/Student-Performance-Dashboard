@@ -1,59 +1,43 @@
-body {
-  background-color: #fefaff;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  padding: 20px;
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-h2 {
+.grade-card {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(230, 200, 255, 0.2);
+  overflow: hidden;
+  border: 1.5px dashed #f3d9ff;
+}
+
+.card-header {
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
   text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Cute pastel themes */
+.pastel-0 { background: #f5c2e7; }
+.pastel-1 { background: #c9c6f9; }
+.pastel-2 { background: #b8e0ff; }
+.pastel-3 { background: #ffd6e0; }
+.pastel-4 { background: #d0f4de; }
+
+.card-body {
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card-body span {
   font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
-  color: #6c5ce7;
+  color: #444;
 }
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border: 2px dashed #dcd6f7;
-}
-
-form input, form button {
-  border-radius: 12px;
-}
-
-.table thead {
-  background-color: #f5e0ff;
-  color: #5f27cd;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #fef4ff;
-}
-
-.btn {
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-a {
-  text-decoration: none;
-  color: #6c5ce7;
-}
-
-a:hover {
-  color: #a29bfe;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 14px;
-  text-align: center;
-  color: #aaa;
-}
-
